@@ -1,0 +1,24 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-block-title {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+tr:hover {
+  background-color: #004d40;
+}
+
+th {
+  background-color: #04aa6d21;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 0px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}

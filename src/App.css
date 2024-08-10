@@ -1,0 +1,10 @@
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.placeholder {
+  margin: 0 auto;
+  width: var(--dynamic-blocks-width);
+  text-align: center;
+}
