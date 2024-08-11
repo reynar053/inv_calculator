@@ -26,7 +26,7 @@ export default function InputBlock({ title, name }) {
         type="number"
         defaultValue={data.calcData[name]}
         onChange={(e) => handler(name, e.target.value)}
-        min={0}
+        min={1}
       ></input>
       {error && <Placeholder text={error} />}
     </div>

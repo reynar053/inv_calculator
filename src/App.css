@@ -7,4 +7,5 @@ img {
   margin: 0 auto;
   width: var(--dynamic-blocks-width);
   text-align: center;
+  color: salmon;
 }

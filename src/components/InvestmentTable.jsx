@@ -6,7 +6,7 @@ export default function InvestmentTable() {
   const data = useContext(CalcContext);
   const investmentData = useMemo(() => {
     const investmentData = [];
-    for (let i = 0; i <= data.calcData.duration; i++) {
+    for (let i = 0; i < data.calcData.duration; i++) {
       let invested =
         (investmentData[i - 1]?.invested ?? data.calcData.initial) +
         data.calcData.annualInvestment;
