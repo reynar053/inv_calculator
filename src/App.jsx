@@ -35,7 +35,7 @@ function App() {
         ) : (
           <Placeholder text="Срок должен быть больше нуля." />
         )}
-        {Object.values(boop).some((v) => isNaN(v)) ? (
+        {Object.values(calcData).some((v) => isNaN(v)) ? (
           <InvestmentTable />
         ) : (
           <Placeholder text="Все поля должны быть заполнены." />
