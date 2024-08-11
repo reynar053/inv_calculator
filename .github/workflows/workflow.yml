@@ -10,7 +10,8 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      pages: write # to deploy to Pages
+      pages: write
+      contents: read
       id-token: write
     steps:
       - name: Checkout code
