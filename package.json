@@ -6,7 +6,7 @@
   "homepage": "https://reynar053.github.io/inv_calculator/",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/inv_calculator/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
