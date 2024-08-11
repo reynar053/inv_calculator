@@ -30,16 +30,7 @@ function App() {
       <h1>Калькулятор (лосося)</h1>
       <CalcContext.Provider value={data}>
         <UserInput />
-        {calcData.duration > 0 ? (
-          <InvestmentTable />
-        ) : (
-          <Placeholder text="Срок должен быть больше нуля." />
-        )}
-        {Object.values(calcData).some((v) => isNaN(v)) ? (
-          <InvestmentTable />
-        ) : (
-          <Placeholder text="Все поля должны быть заполнены." />
-        )}
+        <InvestmentTable />
       </CalcContext.Provider>
     </>
   );

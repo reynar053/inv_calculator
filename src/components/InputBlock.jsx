@@ -1,11 +1,21 @@
 import { useContext } from "react";
 import { CalcContext } from "../App";
+import Placeholder from "./Placeholder";
 
 export default function InputBlock({ title, name }) {
   const data = useContext(CalcContext);
+  const [error, setError] = useContext(null);
 
   function handler(name, value) {
-    data.handleData({ ...data.calcData, [name]: Number.parseInt(value) });
+    const parsedValue = parseInt(value);
+    if (isNaN(parsedValue)) {
+      setError("Поле пустое!");
+    } else if (parsedValue < 1) {
+      setError("Поле меньше 1!");
+    } else {
+      data.handleData({ ...data.calcData, [name]: parsedValue });
+      setError(null);
+    }
   }
 
   return (
@@ -18,6 +28,7 @@ export default function InputBlock({ title, name }) {
         onChange={(e) => handler(name, e.target.value)}
         min={0}
       ></input>
+      {error && <Placeholder text={error} />}
     </div>
   );
 }
