@@ -10,12 +10,12 @@ const INITIAL_INVESTMENT_DATA = {
   initial: 1000,
   duration: 6,
   roi: 10,
-  annualInvestment: 500
+  annualInvestment: 500,
 };
 
 function App() {
   const [calcData, setCalcData] = useState(INITIAL_INVESTMENT_DATA);
-
+  Object.values(calcData).reduce;
   function handleData(data) {
     setCalcData({ ...data });
   }
@@ -30,7 +30,16 @@ function App() {
       <h1>Калькулятор (лосося)</h1>
       <CalcContext.Provider value={data}>
         <UserInput />
-        {calcData.duration > 0 ? <InvestmentTable /> : <Placeholder />}
+        {calcData.duration > 0 ? (
+          <InvestmentTable />
+        ) : (
+          <Placeholder text="Срок должен быть больше нуля." />
+        )}
+        {Object.values(boop).some((v) => isNaN(v)) ? (
+          <InvestmentTable />
+        ) : (
+          <Placeholder text="Все поля должны быть заполнены." />
+        )}
       </CalcContext.Provider>
     </>
   );

@@ -1,7 +1,7 @@
-export default function Placeholder() {
+export default function Placeholder({ text }) {
   return (
     <>
-      <div className="placeholder">Срок должен быть больше нуля.</div>
+      <div className="placeholder">{text}</div>
     </>
   );
 }
