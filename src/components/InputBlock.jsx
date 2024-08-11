@@ -1,10 +1,10 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { CalcContext } from "../App";
 import Placeholder from "./Placeholder";
 
 export default function InputBlock({ title, name }) {
   const data = useContext(CalcContext);
-  const [error, setError] = useContext(null);
+  const [error, setError] = useState(null);
 
   function handler(name, value) {
     const parsedValue = parseInt(value);
